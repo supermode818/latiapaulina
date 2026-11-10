@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tia Paulina | Desayunos Sorpresa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- REDES SOCIALES -->
+    <div class="social-icons">
+    <!-- FACEBOOK -->
+    <a href="https://www.facebook.com/TUUSUARIO"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- INSTAGRAM -->
+    <a href="https://www.instagram.com/latiapaulina.pe/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- TIKTOK -->
+    <a href="https://www.tiktok.com/@latiapaulina.pe"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+</div>
+        <span class="currency">S/ PEN ▼</span>
+    </div>
+
+    <!-- CABECERA -->
+    <header class="header">
+
+        <div class="header-left">
+            <button class="country">🇵🇪 PE ▼</button>
+            <button class="delivery">
+                <i class="fa-solid fa-location-dot"></i>
+                ¿A dónde enviamos?
+                <span>Elegir</span>
+            </button>
+        </div>
+
+        <a href="#" class="logo">
+            <img src="logo.png" alt="La Tia Paulina - Desayunos Sorpresa">
+        </a>
+
+        <div class="header-right">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Buscar">
+            </div>
+
+            <button class="icon-button" aria-label="Mi cuenta">
+                <i class="fa-solid fa-user"></i>
+            </button>
+
+            <button class="icon-button cart-button" aria-label="Carrito">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cartCount">0</span>
+            </button>
+        </div>
+
+    </header>
+
+    
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-container" id="catalogo">
+
+        <!-- FILTROS -->
+        <aside class="filters">
+
+            <h3>Filtrar productos</h3>
+
+            <div class="filter-group">
+                <label for="occasionFilter">Ocasiones</label>
+                <select id="occasionFilter">
+                    <option value="all">Todas las ocasiones</option>
+                    <option value="cumpleaños">Cumpleaños</option>
+                    <option value="amor">Amor</option>
+                    <option value="aniversario">Aniversario</option>
+                    <option value="amistad">Amistad</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="colorFilter">Color</label>
+                <select id="colorFilter">
+                    <option value="all">Todos los colores</option>
+                    <option value="rojo">Rojo</option>
+                    <option value="rosado">Rosado</option>
+                    <option value="amarillo">Amarillo</option>
+                    <option value="blanco">Blanco</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="categoryFilter">Categoría</label>
+                <select id="categoryFilter">
+                    <option value="all">Todas las categorías</option>
+                    <option value="ramos">Ramos</option>
+                    <option value="cajas">Cajas</option>
+                    <option value="arreglos">Arreglos</option>
+                    <option value="regalos">Regalos</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Precio</label>
+                <input type="range" id="priceFilter"
+                       min="40" max="750" value="750">
+                <div class="price-values">
+                    <span>S/ 40</span>
+                    <span id="priceValue">S/ 750</span>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Disponibilidad</label>
+                <label class="check-label">
+                    <input type="checkbox" checked>
+                    Disponible ahora
+                </label>
+            </div>
+
+        </aside>
+
+        <!-- PRODUCTOS -->
+        <section class="products-section">
+
+            <div class="catalog-header">
+                <div>
+                    <span class="breadcrumb">Inicio / Classic</span>
+                    <h1>Classic</h1>
+                    <p>Detalles especiales para momentos inolvidables.</p>
+                </div>
+
+                <select id="sortFilter" class="sort-filter">
+                    <option value="default">Ordenar: Destacados</option>
+                    <option value="low">Menor precio</option>
+                    <option value="high">Mayor precio</option>
+                    <option value="name">Nombre</option>
+                </select>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se generan desde JavaScript -->
+            </div>
+
+            <p id="emptyMessage" class="empty-message" hidden>
+                No encontramos productos con esos filtros.
+            </p>
+
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <div class="footer-column brand-column">
+            <img src="logo.png" alt="Florimood" class="footer-logo">
+            <p>
+                En La Tía Paulina creamos desayunos premium sorpresa y regalos especiales en Perú, diseñados para emocionar, sorprender y convertir cada ocasión en un recuerdo inolvidable.Momentos especiales merecen regalos extraordinarios.
+            </p>
+
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contacto</h3>
+            <p><i class="fab fa-whatsapp"></i> +51 937 392 556</p>
+            <p><i class="fa-regular fa-envelope"></i> info.latiapaulina@gmail.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Lima, Perú</p>
+            <a href="#">Escríbenos por WhatsApp →</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Políticas</h3>
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Cambios y devoluciones</a>
+            <a href="#">Envíos y tiempos de entrega</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Información</h3>
+            <a href="#">Sobre La Tia Paulina</a>
+            <a href="#">Preguntas frecuentes</a>
+            <a href="#">Pedidos personalizados</a>
+            <a href="#">Cuidado de tus flores</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Formas de pago</h3>
+            <div class="payment-methods">
+                <span>VISA</span>
+                <span>Mastercard</span>
+                <span>Yape</span>
+                <span>Plin</span>
+            </div>
+            <p>Transferencia bancaria</p>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        © 2026 La Tia Paulina. Todos los derechos reservados.
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
